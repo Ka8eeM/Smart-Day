@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Smart Day</string>
+    <string name="activity_login">Log In</string>
+    <string name="activity_signup">Sign Up</string>
+
+    <string name="Sign_Up">Sign Up</string>
+    <string name="Log_In">Log In</string>
+
+
+    <string name="welcome1">Create an account to save your tasks and access them anywhere.</string>
+    <string name="welcome2">Organize and prioritize all your tasks and projects so you live more and stress less.</string>
+    <string name="welcome3">Keep team work organized too-share projects, assigns tasks and discuss the details in comments.</string>
+
+    <string-array name="welcome">
+        <item>@string/welcome1</item>
+        <item>@string/welcome2</item>
+        <item>@string/welcome3</item>
+    </string-array>
+
+
+    <string name="log_with_facebook">Log in with Facebook</string>
+    <string name="log_with_google">Log in with Google</string>
+    <string name="log_with_myaccount">Log in with Account</string>
+
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_mail">Enter e-mail</string>
+    <string name="enter_name">Enter Name</string>
+
+    <string name="sign_with_google">Sign up with Google</string>
+    <string name="sign_with_facebook">Sign up with Facebook</string>
+
+
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

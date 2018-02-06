@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="com.example.karim.gproject.Activities.LogIn">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3" />
+
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_margin="5dp"
+        android:background="@drawable/template_buttons"
+        android:gravity="center_vertical"
+        android:hint="@string/enter_name"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edMail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_margin="5dp"
+        android:background="@drawable/template_buttons"
+        android:gravity="center_vertical"
+        android:hint="@string/enter_mail"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+
+        android:id="@+id/edpassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_margin="5dp"
+        android:background="@drawable/template_buttons"
+        android:gravity="center_vertical"
+        android:hint="@string/enter_password"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Sign Up"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5"
+        android:layout_margin="5dp"
+        android:text="@string/sign_with_facebook"
+        android:textAllCaps="false"
+        android:background="@drawable/template_buttons"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".5"
+        android:layout_margin="5dp"
+        android:text="@string/sign_with_google"
+        android:textAllCaps="false"
+        android:background="@drawable/template_buttons"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
