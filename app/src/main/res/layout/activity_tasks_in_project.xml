@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.karim.gproject.Activities.TasksInProject">
+
+    <ListView
+        android:id="@+id/root_view_for_task_in_project"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_task_in_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:background="@color/back_ground"
+        android:clickable="true"
+        android:src="@drawable/ic_add_white" />
+
+</RelativeLayout>
