@@ -30,7 +30,6 @@ public class InflateTaskAdapter extends ArrayAdapter<TaskToView> {
             listProjects = LayoutInflater.from(getContext()).inflate(R.layout.task_view_item, parrent, false);
             TaskToView taskToView = getItem(position);
             Button btn = listProjects.findViewById(R.id.button_view_task);
-            btn = taskToView.getBtn();
         }
         return listProjects;
     }

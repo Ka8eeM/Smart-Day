@@ -54,7 +54,7 @@ public class UsersInProject extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(UsersInProject.this, TaskDetails.class));
+                startActivity(new Intent(UsersInProject.this, OtherProfiles.class));
             }
         });
     }

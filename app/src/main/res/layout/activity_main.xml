@@ -39,6 +39,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:layout_marginTop="5dp"
             android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textColorHint="#cccccc"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView

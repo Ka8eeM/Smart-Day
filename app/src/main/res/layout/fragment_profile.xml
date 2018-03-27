@@ -4,10 +4,104 @@
     android:layout_height="match_parent"
     tools:context="com.example.karim.gproject.Fragments.Profile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:weightSum="4"
+        android:gravity="top">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile_pic"/>
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile owner name"/>
+            <TextView
+                android:paddingLeft="18sp"
+                android:gravity="center_vertical"
+                android:text="user name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:paddingLeft="18dp"
+                android:inputType="text"
+                android:text="Mahamed emad emsawy"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_sign_style"/>
+            <TextView
+                android:paddingLeft="18sp"
+                android:gravity="center_horizontal"
+                android:text="e-mail"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="18sp"
+                android:paddingLeft="18dp"
+                android:inputType="textEmailAddress"
+                android:text="M.EmadAhmed101@gmail.com"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_sign_style"/>
+            <TextView
 
+                android:paddingLeft="18sp"
+                android:gravity="center_horizontal"
+                android:text="password"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="18sp"
+                android:paddingLeft="18dp"
+                android:inputType="textPassword"
+                android:text="123456asdfggfgfgfgfg"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_sign_style"/>
+            <TextView
+
+                android:paddingLeft="18sp"
+                android:gravity="center_horizontal"
+                android:text="Bio"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="18sp"
+                android:paddingLeft="18dp"
+                android:inputType="text|textMultiLine"
+                android:text="this is your bio this is your bio this is your bio this is your bio this is your bio this is your biothis is your bio"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/template_for_show_data_about_project"/>
+
+        <Button
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/save_1"/>
+    </LinearLayout>
 </FrameLayout>

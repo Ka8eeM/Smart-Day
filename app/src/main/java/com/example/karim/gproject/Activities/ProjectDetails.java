@@ -31,7 +31,6 @@ public class ProjectDetails extends AppCompatActivity {
         } else if (view.getId() == R.id.view_tasks) {
             startActivity(new Intent(this, TasksInProject.class));
         } else {
-            Toast.makeText(this, "This users  activity", Toast.LENGTH_LONG).show();
             startActivity(new Intent(this, UsersInProject.class));
         }
     }
