@@ -4,89 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="vertical"
-    tools:context="com.example.karim.gproject.Activities.LogIn">
+    tools:context="com.example.karim.gproject.Activities.SignUp">
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".3" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edName"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:layout_margin="5dp"
-        android:background="@drawable/template_buttons"
-        android:gravity="center_vertical"
-        android:hint="@string/enter_name"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/assistant" />
 
-    <EditText
-        android:id="@+id/edMail"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:layout_margin="5dp"
-        android:background="@drawable/template_buttons"
-        android:gravity="center_vertical"
-        android:hint="@string/enter_mail"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
-    <EditText
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/button_sign_style"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        android:id="@+id/edpassword"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:layout_margin="5dp"
-        android:background="@drawable/template_buttons"
-        android:gravity="center_vertical"
-        android:hint="@string/enter_password"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="Sign Up"
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".3" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/button_sign_style"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight=".5"
-        android:layout_margin="5dp"
-        android:text="@string/sign_with_facebook"
-        android:textAllCaps="false"
-        android:background="@drawable/template_buttons"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/button_sign_style"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight=".5"
-        android:layout_margin="5dp"
-        android:text="@string/sign_with_google"
-        android:textAllCaps="false"
-        android:background="@drawable/template_buttons"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/sign_up"
+            android:fontFamily="Tahoma"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/line_sign_up_with" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/facebook"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/facebook" />
+
+            <Button
+                android:id="@+id/google"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/google" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

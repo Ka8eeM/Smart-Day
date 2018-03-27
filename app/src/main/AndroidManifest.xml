@@ -16,13 +16,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activities.LogIn"
-            android:label="@string/activity_login"></activity>
-        <activity
-            android:name=".Activities.SignUp"
-            android:label="@string/activity_signup"></activity>
-        <activity android:name=".Activities.TaskToday"></activity>
+        <activity android:name=".Activities.HomeTasks" />
+        <activity android:name=".Activities.SignUp" />
+        <activity android:name=".Activities.ProjectDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.HomeTasks" />
+        </activity>
+        <activity android:name=".Activities.TasksInProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ProjectDetails" />
+        </activity>
+        <activity android:name=".Activities.UsersInProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ProjectDetails" />
+        </activity>
+        <activity android:name=".Activities.TaskDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.UsersInProject" />
+        </activity>
+        <activity android:name=".Activities.TaskDetailFromProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ProjectDetails" />
+        </activity>
+        <activity android:name=".Activities.EditProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ProjectDetails" />
+        </activity>
+        <activity android:name=".Activities.EditTask">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.HomeTasks" />
+        </activity>
+        <activity android:name=".Activities.AddProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.HomeTasks" />
+        </activity>
+        <activity android:name=".Activities.AddTask">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.HomeTasks" />
+        </activity>
+        <activity android:name=".Activities.EditUser" />
+        <activity android:name=".Activities.AddTaskFromProject">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.AddProject" />
+        </activity>
+        <activity android:name=".Activities.Comments"></activity>
     </application>
 
 </manifest>

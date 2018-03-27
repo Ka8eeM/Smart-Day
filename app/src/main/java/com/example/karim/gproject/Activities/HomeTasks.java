@@ -1,21 +1,21 @@
 package com.example.karim.gproject.Activities;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.karim.gproject.Fragments.CreateProject;
+import com.example.karim.gproject.Fragments.About;
+import com.example.karim.gproject.Fragments.MyTasks;
+import com.example.karim.gproject.Fragments.Profile;
+import com.example.karim.gproject.Fragments.Project;
 import com.example.karim.gproject.Fragments.Settings;
-import com.example.karim.gproject.Fragments.SmartSchedule;
 import com.example.karim.gproject.R;
 
-public class TaskToday extends AppCompatActivity {
+public class HomeTasks extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -32,6 +32,16 @@ public class TaskToday extends AppCompatActivity {
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setUpDrawerContent(nv);
+
+        // default view
+        android.support.v4.app.Fragment mFragment = new MyTasks();
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.myFragment, mFragment).commit();
+        nv.setCheckedItem(R.id.my_tasks);
+    }
+
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
     }
 
     @Override
@@ -45,17 +55,24 @@ public class TaskToday extends AppCompatActivity {
         android.support.v4.app.Fragment mFragment = null;
         Class fragmentClass;
         switch (item.getItemId()) {
-            case R.id.create_project:
-                fragmentClass = CreateProject.class;
+            case R.id.my_tasks:
+                fragmentClass = MyTasks.class;
                 break;
-            case R.id.settings:
-                fragmentClass = Settings.class;
+            case R.id.projects:
+                fragmentClass = Project.class;
                 break;
-            case R.id.smart_schedule:
-                fragmentClass = SmartSchedule.class;
+            case R.id.profile:
+                fragmentClass = Profile.class;
+                break;
+            case R.id.About:
+                fragmentClass = About.class;
+                break;
+            case R.id.log_out:
+                fragmentClass = Project.class;
                 break;
             default:
-                fragmentClass = CreateProject.class;
+                fragmentClass = Settings.class;
+                break;
         }
         try {
             mFragment = (android.support.v4.app.Fragment) fragmentClass.newInstance();
@@ -64,13 +81,13 @@ public class TaskToday extends AppCompatActivity {
         }
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.myFragment,mFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.myFragment, mFragment).commit();
         item.setChecked(true);
-        setTitle(item.getTitle());
+        //setTitle(item.getTitle());
         mDrawerLayout.closeDrawers();
     }
-    private void setUpDrawerContent(NavigationView navigationView)
-    {
+
+    private void setUpDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override

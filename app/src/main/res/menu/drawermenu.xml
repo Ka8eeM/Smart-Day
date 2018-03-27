@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/my_tasks"
+        android:title="My Tasks" />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile" />
 
-    <item android:id="@+id/all_tasks" android:title="All Tasks" android:icon="@drawable/ic_menu"/>
-    <item android:id="@+id/create_project" android:title="Create Project" android:icon="@drawable/ic_plus_button"/>
-    <item android:id="@+id/smart_schedule" android:title="Smart Schedule" android:icon="@drawable/ic_icon"/>
-    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_work_tool"/>
-    <item android:id="@+id/log_out" android:title="Log out" android:icon="@drawable/ic_logout"/>
+    <item
+        android:id="@+id/projects"
+        android:title="Projects" />
+    <item
+        android:id="@+id/About"
+        android:title="About" />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/log_out"
+        android:title="Log out" />
 </menu>
