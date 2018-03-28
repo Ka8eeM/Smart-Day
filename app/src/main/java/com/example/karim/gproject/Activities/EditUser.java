@@ -14,7 +14,7 @@ public class EditUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_in_project);
-        btnFloat = (android.support.design.widget.FloatingActionButton) findViewById(R.id.add_user_in_project);
+        btnFloat = (android.support.design.widget.FloatingActionButton) findViewById(R.id.fb_add_user_in_project);
         btnFloat.setClickable(true);
         btnFloat.setVisibility(View.VISIBLE);
     }

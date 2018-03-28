@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.example.karim.gproject.Fragments.About;
 import com.example.karim.gproject.Fragments.MyTasks;
+import com.example.karim.gproject.Fragments.Notifications;
 import com.example.karim.gproject.Fragments.Profile;
 import com.example.karim.gproject.Fragments.Project;
 import com.example.karim.gproject.Fragments.Settings;
@@ -70,6 +71,9 @@ public class HomeTasks extends AppCompatActivity {
             case R.id.log_out:
                 fragmentClass = Project.class;
                 break;
+            case R.id.notfications:
+                fragmentClass = Notifications.class;
+                break;
             default:
                 fragmentClass = Settings.class;
                 break;
@@ -83,7 +87,6 @@ public class HomeTasks extends AppCompatActivity {
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.myFragment, mFragment).commit();
         item.setChecked(true);
-        //setTitle(item.getTitle());
         mDrawerLayout.closeDrawers();
     }
 

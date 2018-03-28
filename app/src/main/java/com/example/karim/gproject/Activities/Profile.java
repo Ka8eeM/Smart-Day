@@ -6,13 +6,13 @@ import android.os.Bundle;
 
 import com.example.karim.gproject.R;
 
-public class AddTaskFromProject extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_task);
-        getSupportActionBar().setTitle("Add Task");
+        setContentView(R.layout.activity_profile);
+        getSupportActionBar().setTitle("Profile");
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }

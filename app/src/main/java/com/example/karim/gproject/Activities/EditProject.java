@@ -1,6 +1,7 @@
 package com.example.karim.gproject.Activities;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.karim.gproject.Fragments.MessageDialog;
 import com.example.karim.gproject.Interfaces.PassDataBetweenDialogAndActivities;
 import com.example.karim.gproject.R;
 
@@ -21,21 +23,19 @@ public class EditProject extends AppCompatActivity implements PassDataBetweenDia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_project);
-        getSupportActionBar().setTitle("Edit Project");
         dialog = new Dialog(this);
+        getSupportActionBar().setTitle("Edit Project");
     }
 
     public void onClickInsideEditProject(View view) {
         if (view.getId() == R.id.edit_desc) {
             openDialogForEditDes();
         } else if (view.getId() == R.id.edit_tasks) {
-
+            startActivity(new Intent(this, TasksInProject.class));
         } else if (view.getId() == R.id.edit_users) {
-
+            startActivity(new Intent(this, UsersInProject.class));
         } else if (view.getId() == R.id.delete_projec) {
-
-        } else if (view.getId() == R.id.save) {
-
+            showAlertDialog();
         }
     }
 
@@ -59,6 +59,12 @@ public class EditProject extends AppCompatActivity implements PassDataBetweenDia
             }
         });
         dialog.show();
+    }
+
+    private void showAlertDialog() {
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        MessageDialog messageDialog = new MessageDialog();
+        messageDialog.show(manager, "Message");
     }
 
     @Override

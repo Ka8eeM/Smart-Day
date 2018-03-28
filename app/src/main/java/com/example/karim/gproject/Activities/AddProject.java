@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.karim.gproject.Fragments.MessageDialog;
 import com.example.karim.gproject.R;
 
 public class AddProject extends AppCompatActivity {
@@ -35,10 +36,7 @@ public class AddProject extends AppCompatActivity {
         } else if (view.getId() == R.id.assign_task_for_project) {
             assignTask();
         } else if (view.getId() == R.id.save_for_project) {
-            Toast.makeText(getBaseContext(), "It is ok it works now", Toast.LENGTH_LONG).show();
-
-        } else if (view.getId() == R.id.cancel_for_project) {
-            Toast.makeText(getBaseContext(), "It canceled", Toast.LENGTH_LONG).show();
+            showAlertDialog();
         }
     }
 
@@ -110,5 +108,11 @@ public class AddProject extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+
+    private void showAlertDialog() {
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        MessageDialog messageDialog = new MessageDialog();
+        messageDialog.show(manager, "Message");
     }
 }

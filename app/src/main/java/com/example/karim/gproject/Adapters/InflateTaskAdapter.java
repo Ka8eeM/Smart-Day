@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.karim.gproject.Models.TaskToView;
 import com.example.karim.gproject.R;
@@ -29,7 +30,8 @@ public class InflateTaskAdapter extends ArrayAdapter<TaskToView> {
         if (listProjects == null) {
             listProjects = LayoutInflater.from(getContext()).inflate(R.layout.task_view_item, parrent, false);
             TaskToView taskToView = getItem(position);
-            Button btn = listProjects.findViewById(R.id.button_view_task);
+            TextView btn = listProjects.findViewById(R.id.button_view_task);
+            btn.setText(taskToView.getBtn().toString());
         }
         return listProjects;
     }
